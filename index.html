@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LumaSmile — Premium Dental Studio</title>
+  <meta name="description" content="LumaSmile Dental Studio — Where Precision Meets Artistry. Book your premium dental care experience today. Teeth whitening, implants, cosmetic dentistry & more." />
+  <meta property="og:title" content="LumaSmile — Premium Dental Studio" />
+  <meta property="og:description" content="Experience world-class dental care in a serene, luxury environment." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════════ -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-icon">◆</span>
+        Luma<span class="logo-accent">Smile</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#booking" class="nav-cta" id="navBookBtn">Book Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════════════ -->
+  <section id="hero" class="hero">
+    <!-- Video Background -->
+    <div class="hero-video-wrap">
+      <video autoplay muted loop playsinline id="heroVideo" class="hero-video">
+        <source src="6192874-hd_1920_1080_30fps.mp4" type="video/mp4" />
+        <source src="istockphoto-1151261186-640_adpp_is.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay"></div>
+    </div>
+
+    <!-- Floating Particle Canvas -->
+    <canvas id="particleCanvas" class="particle-canvas"></canvas>
+
+    <!-- Floating 3D Tooth -->
+    <div class="floating-tooth-wrap" id="floatingTooth">
+      <img src="Screenshot_18-6-2026_8151_unsplash.com.jpeg" alt="3D Floating Tooth" class="floating-tooth" />
+      <div class="tooth-glow"></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="hero-content">
+      <div class="hero-badge" id="heroBadge">
+        <span class="badge-dot"></span>
+        Now Accepting New Patients
+      </div>
+      <h1 class="hero-title" id="heroTitle">
+        Elevate Your<br />
+        <span class="gradient-text">Smile.</span><br />
+        <em class="italic-sub">Effortlessly.</em>
+      </h1>
+      <p class="hero-sub" id="heroSub">
+        Where cutting-edge precision meets luxury dental artistry.<br />
+        Your journey to a flawless smile begins here.
+      </p>
+      <div class="hero-cta-group" id="heroCtaGroup">
+        <a href="#booking" class="btn-primary" id="heroPrimaryBtn">
+          <span>Book Your Appointment</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#services" class="btn-ghost" id="heroSecondaryBtn">
+          Explore Services
+        </a>
+      </div>
+      <div class="hero-stats" id="heroStats">
+        <div class="stat-item">
+          <span class="stat-num">15+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">4,800+</span>
+          <span class="stat-label">Happy Patients</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">98%</span>
+          <span class="stat-label">Satisfaction Rate</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator" id="scrollIndicator">
+      <span>Scroll to Explore</span>
+      <div class="scroll-line"><div class="scroll-dot"></div></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       MARQUEE STRIP
+  ═══════════════════════════════════════════ -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>✦ Teeth Whitening</span>
+      <span>✦ Dental Implants</span>
+      <span>✦ Orthodontics</span>
+      <span>✦ Cosmetic Veneers</span>
+      <span>✦ Root Canal Therapy</span>
+      <span>✦ Gum Treatment</span>
+      <span>✦ Pediatric Dentistry</span>
+      <span>✦ Invisalign</span>
+      <span>✦ Teeth Whitening</span>
+      <span>✦ Dental Implants</span>
+      <span>✦ Orthodontics</span>
+      <span>✦ Cosmetic Veneers</span>
+      <span>✦ Root Canal Therapy</span>
+      <span>✦ Gum Treatment</span>
+      <span>✦ Pediatric Dentistry</span>
+      <span>✦ Invisalign</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       SERVICES SECTION
+  ═══════════════════════════════════════════ -->
+  <section id="services" class="services-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Our Expertise</span>
+        <h2 class="section-title">Premium Dental <span class="gradient-text">Services</span></h2>
+        <p class="section-sub">Every treatment is a work of art, delivered with precision, compassion, and the latest technology.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card" data-service="whitening">
+          <div class="service-card-glow"></div>
+          <div class="service-icon-wrap">
+            <div class="service-icon">✦</div>
+          </div>
+          <div class="service-floating-orb"></div>
+          <h3>Teeth Whitening</h3>
+          <p>Reveal a luminous, radiant smile with our professional-grade whitening systems — up to 10 shades brighter in one session.</p>
+          <div class="service-tag">From $299</div>
+          <a href="#booking" class="service-link">Book Treatment <span>→</span></a>
+        </div>
+
+        <div class="service-card featured-card" data-service="implants">
+          <div class="service-card-glow featured-glow"></div>
+          <div class="featured-badge-card">Most Popular</div>
+          <div class="service-icon-wrap">
+            <div class="service-icon">◉</div>
+          </div>
+          <div class="service-floating-orb"></div>
+          <h3>Dental Implants</h3>
+          <p>Permanent, natural-looking tooth replacements that feel and function exactly like your real teeth. Lifetime confidence guaranteed.</p>
+          <div class="service-tag">From $1,299</div>
+          <a href="#booking" class="service-link">Book Treatment <span>→</span></a>
+        </div>
+
+        <div class="service-card" data-service="veneers">
+          <div class="service-card-glow"></div>
+          <div class="service-icon-wrap">
+            <div class="service-icon">◇</div>
+          </div>
+          <div class="service-floating-orb"></div>
+          <h3>Porcelain Veneers</h3>
+          <p>Ultra-thin, handcrafted shells that transform the shape, color, and alignment of your smile with Hollywood-level precision.</p>
+          <div class="service-tag">From $799/tooth</div>
+          <a href="#booking" class="service-link">Book Treatment <span>→</span></a>
+        </div>
+
+        <div class="service-card" data-service="invisalign">
+          <div class="service-card-glow"></div>
+          <div class="service-icon-wrap">
+            <div class="service-icon">○</div>
+          </div>
+          <div class="service-floating-orb"></div>
+          <h3>Invisalign</h3>
+          <p>Discreetly straighten your teeth with virtually invisible aligners. No metal, no discomfort — just effortless transformation.</p>
+          <div class="service-tag">From $3,500</div>
+          <a href="#booking" class="service-link">Book Treatment <span>→</span></a>
+        </div>
+
+        <div class="service-card" data-service="checkup">
+          <div class="service-card-glow"></div>
+          <div class="service-icon-wrap">
+            <div class="service-icon">✓</div>
+          </div>
+          <div class="service-floating-orb"></div>
+          <h3>Routine Checkups</h3>
+          <p>Comprehensive oral health assessments with cutting-edge diagnostics. Prevention is the most powerful treatment.</p>
+          <div class="service-tag">From $99</div>
+          <a href="#booking" class="service-link">Book Treatment <span>→</span></a>
+        </div>
+
+        <div class="service-card" data-service="cosmetic">
+          <div class="service-card-glow"></div>
+          <div class="service-icon-wrap">
+            <div class="service-icon">✺</div>
+          </div>
+          <div class="service-floating-orb"></div>
+          <h3>Smile Makeover</h3>
+          <p>A fully customized combination of treatments designed to give you the complete dream smile transformation you deserve.</p>
+          <div class="service-tag">Custom Quote</div>
+          <a href="#booking" class="service-link">Book Consultation <span>→</span></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       ANTIGRAVITY INTERACTIVE SECTION
+  ═══════════════════════════════════════════ -->
+  <section id="about" class="antigravity-section">
+    <canvas id="agCanvas" class="ag-canvas"></canvas>
+    <div class="ag-content">
+      <div class="ag-text-col">
+        <span class="section-tag">Our Philosophy</span>
+        <h2 class="section-title">Care That <span class="gradient-text">Defies</span><br />The Ordinary</h2>
+        <p class="ag-desc">At LumaSmile, we believe dental care should feel like a luxury experience — not an anxiety-inducing chore. Our state-of-the-art studio is designed to put you at ease from the moment you walk through our doors.</p>
+        <ul class="ag-features">
+          <li><span class="feature-check">◆</span> Zero-pain sedation dentistry</li>
+          <li><span class="feature-check">◆</span> Same-day emergency appointments</li>
+          <li><span class="feature-check">◆</span> Digital 3D smile preview technology</li>
+          <li><span class="feature-check">◆</span> Flexible payment plans, 0% interest</li>
+          <li><span class="feature-check">◆</span> Sterilization-certified premium facility</li>
+        </ul>
+        <a href="#booking" class="btn-primary ag-btn">
+          <span>Schedule Your Visit</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="ag-visual-col">
+        <div class="ag-image-stack">
+          <img src="jonathan-borba-wzV17t-k3k0-unsplash.jpg" alt="Professional dental treatment" class="ag-img ag-img-main" />
+          <img src="jarmoluk-dentist-428642_1920.jpg" alt="Advanced dental equipment" class="ag-img ag-img-secondary" />
+          <div class="ag-badge-float">
+            <div class="ag-badge-inner">
+              <span class="ag-badge-num">4.9★</span>
+              <span class="ag-badge-text">Patient Rating</span>
+            </div>
+          </div>
+          <div class="ag-orb ag-orb-1"></div>
+          <div class="ag-orb ag-orb-2"></div>
+          <div class="ag-orb ag-orb-3"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       TESTIMONIALS
+  ═══════════════════════════════════════════ -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Patient Stories</span>
+        <h2 class="section-title">Real Smiles,<br /><span class="gradient-text">Real Results</span></h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card" id="t1">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"I was terrified of dentists my entire life. LumaSmile changed that completely. The staff was warm, the studio was gorgeous, and my new veneers look absolutely incredible."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SR</div>
+            <div class="author-info">
+              <span class="author-name">Sarah Rodriguez</span>
+              <span class="author-treatment">Porcelain Veneers</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card featured-testimonial" id="t2">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"My dental implants feel completely natural. After years of hiding my smile, I can finally laugh freely in photos. Best investment I've ever made in myself."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MK</div>
+            <div class="author-info">
+              <span class="author-name">Michael Khan</span>
+              <span class="author-treatment">Dental Implants</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" id="t3">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"The Invisalign treatment was seamless. No one even noticed I was wearing aligners! The LumaSmile team guided me every step of the way. Couldn't be happier."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AP</div>
+            <div class="author-info">
+              <span class="author-name">Aisha Patel</span>
+              <span class="author-treatment">Invisalign</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating Tooth Visual -->
+      <div class="testimonial-tooth-wrap">
+        <img src="Screenshot_18-6-2026_8151_unsplash.com.jpeg" alt="Floating dental element" class="testimonial-tooth" id="testimonialTooth" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       GALLERY SECTION
+  ═══════════════════════════════════════════ -->
+  <section id="gallery" class="gallery-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Our Studio</span>
+        <h2 class="section-title">Designed For Your <span class="gradient-text">Comfort</span></h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item gallery-item-large">
+          <img src="jarmoluk-dentist-428642_1920.jpg" alt="Advanced dental equipment at LumaSmile" />
+          <div class="gallery-overlay">
+            <span>State-of-the-Art Equipment</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="jonathan-borba-wzV17t-k3k0-unsplash.jpg" alt="Professional dental care at LumaSmile" />
+          <div class="gallery-overlay">
+            <span>Expert Care Team</span>
+          </div>
+        </div>
+        <div class="gallery-item gallery-video-item">
+          <video autoplay muted loop playsinline>
+            <source src="dead2357-ce1f-4711-bca4-043ad8e22cd3.mp4" type="video/mp4" />
+          </video>
+          <div class="gallery-overlay">
+            <span>Our Premium Studio</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       BOOKING SECTION
+  ═══════════════════════════════════════════ -->
+  <section id="booking" class="booking-section">
+    <div class="booking-bg-orbs">
+      <div class="booking-orb b-orb-1"></div>
+      <div class="booking-orb b-orb-2"></div>
+      <div class="booking-orb b-orb-3"></div>
+    </div>
+    <div class="section-container booking-container">
+      <div class="booking-text-col">
+        <span class="section-tag">Ready to Transform?</span>
+        <h2 class="section-title">Begin Your<br /><span class="gradient-text">Smile Journey</span></h2>
+        <p class="booking-desc">Every extraordinary smile starts with a single appointment. Our team is ready to craft yours with care, expertise, and artistry you can feel.</p>
+        <div class="booking-trust">
+          <div class="trust-item">
+            <div class="trust-icon">🕐</div>
+            <div>
+              <strong>Same-Day Appointments</strong>
+              <span>For urgent dental needs</span>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">🛡️</div>
+            <div>
+              <strong>No Hidden Fees</strong>
+              <span>Transparent pricing always</span>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">💳</div>
+            <div>
+              <strong>All Insurances Accepted</strong>
+              <span>We handle the paperwork</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="booking-form-col">
+        <form class="booking-form" id="bookingForm" novalidate>
+          <div class="form-header">
+            <h3>Book Your Appointment</h3>
+            <p>Free consultation included</p>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" placeholder="Jane" required />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Doe" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" required />
+          </div>
+          <div class="form-group">
+            <label for="service">Treatment Interested In</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Select a service...</option>
+              <option value="whitening">Teeth Whitening</option>
+              <option value="implants">Dental Implants</option>
+              <option value="veneers">Porcelain Veneers</option>
+              <option value="invisalign">Invisalign</option>
+              <option value="checkup">Routine Checkup</option>
+              <option value="makeover">Smile Makeover</option>
+              <option value="emergency">Emergency Appointment</option>
+              <option value="other">Other / Not Sure</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="apptDate">Preferred Date</label>
+              <input type="date" id="apptDate" name="apptDate" required />
+            </div>
+            <div class="form-group">
+              <label for="apptTime">Preferred Time</label>
+              <select id="apptTime" name="apptTime">
+                <option value="">Any time</option>
+                <option value="9am">9:00 AM</option>
+                <option value="10am">10:00 AM</option>
+                <option value="11am">11:00 AM</option>
+                <option value="1pm">1:00 PM</option>
+                <option value="2pm">2:00 PM</option>
+                <option value="3pm">3:00 PM</option>
+                <option value="4pm">4:00 PM</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="notes">Additional Notes (Optional)</label>
+            <textarea id="notes" name="notes" placeholder="Any concerns, allergies, or special requests..." rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn-primary form-submit" id="submitBtn">
+            <span id="submitText">Confirm Appointment</span>
+            <div class="btn-loader" id="btnLoader" style="display:none;"></div>
+          </button>
+          <p class="form-disclaimer">🔒 Your information is 100% secure & private. We'll confirm within 24 hours.</p>
+        </form>
+
+        <!-- Success Message -->
+        <div class="form-success" id="formSuccess" style="display:none;">
+          <div class="success-icon">✓</div>
+          <h3>Appointment Requested!</h3>
+          <p>Thank you! Our team will contact you within 24 hours to confirm your appointment at LumaSmile.</p>
+          <a href="#services" class="btn-primary" style="margin-top: 1.5rem; display: inline-flex;">Explore Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CONTACT / FOOTER INFO
+  ═══════════════════════════════════════════ -->
+  <section id="contact" class="contact-section">
+    <div class="section-container">
+      <div class="contact-grid">
+        <div class="contact-info-col">
+          <div class="contact-logo">
+            <span class="logo-icon">◆</span>
+            Luma<span class="logo-accent">Smile</span>
+          </div>
+          <p class="contact-tagline">Where precision meets artistry.<br />Your confidence is our masterpiece.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <span class="contact-icon">📍</span>
+              <span>123 Luxury Lane, Suite 500<br />Beverly Hills, CA 90210</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">📞</span>
+              <span>+1 (800) LUMA-SMILE</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">✉️</span>
+              <span>hello@lumasmile.com</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">🕐</span>
+              <span>Mon–Fri: 8am – 7pm<br />Sat: 9am – 4pm</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-map-col">
+          <div class="map-placeholder">
+            <div class="map-pin-animation">
+              <div class="map-pin">📍</div>
+              <div class="map-ping"></div>
+            </div>
+            <span>LumaSmile Dental Studio</span>
+            <small>123 Luxury Lane, Beverly Hills</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>© 2026 LumaSmile Dental Studio. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Accessibility</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
